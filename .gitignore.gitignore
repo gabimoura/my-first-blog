@@ -1,0 +1,7 @@
+*.pyc
+__pycache__
+myvenv
+virtualenv-15.0.1.tar
+db.sqlite3
+/static
+.DS_Store
