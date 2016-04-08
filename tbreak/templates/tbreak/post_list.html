@@ -12,4 +12,26 @@
         <p>“…Deactivating and reactivating your goals allows you to stay focused,” he said. “From a practical standpoint, our research suggests that, when faced with long tasks (such as studying before a final exam or doing your taxes), it is best to impose brief breaks on yourself. Brief mental breaks will actually help you stay focused on your task!”</p>
 
     </body>
+
+    <script>
+      /* These would be set as Django template context variables,
+         possibly after having the user submit a form with the
+         necessary information. */
+      var total_breaks = 3;
+      var time_between_breaks = 3000;  // 3 seconds, for testing.
+
+      var breaks_done = 0;
+
+      function takeABreak() {
+        if (breaks_done < total_breaks) {
+          breaks_done ++;
+          alert("Time to take a break!");
+        }
+      }
+
+      window.onload = function () {
+        window.setInterval(takeABreak, time_between_breaks);
+      }
+    </script>
+
 </html>
